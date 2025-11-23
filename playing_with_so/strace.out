@@ -1,0 +1,363 @@
+restart_syscall(<... resuming interrupted poll ...>) = 1
+rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x55ca6339dee0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x55ca6339de30, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x55ca6339ddd0, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGALRM, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+read(0, "\r", 1)                        = 1
+write(1, "\n", 1)                       = 1
+write(1, "\33[?2004l\r", 9)             = 9
+ioctl(0, TCSETSW2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x55ca6339dee0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x55ca6339de30, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=0x55ca6339ddd0, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x7fa88f720b80, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa88e8262c0}, 8) = 0
+openat(AT_FDCWD, "/lib64/libc.so.6", O_RDONLY) = 12
+fcntl(12, F_GETFD)                      = 0
+fcntl(12, F_SETFD, FD_CLOEXEC)          = 0
+fstat(12, {st_mode=S_IFREG|0755, st_size=2459528, ...}) = 0
+lseek(12, 1998848, SEEK_SET)            = 1998848
+read(12, "\240\325\6\0\0\0\0\0\260\325\6\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 2336) = 2336
+read(12, "\1\0\0\0\0\0\0\0\32\207\0\0\0\0\0\0\16\0\0\0\0\0\0\0/\207\0\0\0\0\0\0"..., 4096) = 4096
+openat(AT_FDCWD, "/home/ingenium/cCode/playing_with_so/target", O_RDONLY) = 14
+fcntl(14, F_GETFD)                      = 0
+fcntl(14, F_SETFD, FD_CLOEXEC)          = 0
+fstat(14, {st_mode=S_IFREG|0755, st_size=12624, ...}) = 0
+lseek(14, 4096, SEEK_SET)               = 4096
+read(14, "/lib64/ld-linux-x86-64.so.2\0\0\0\0\0"..., 3592) = 3592
+read(14, "\1\0\0\0\0\0\0\0 \0\0\0\0\0\0\0\f\0\0\0\0\0\0\0<\3@\0\0\0\0\0"..., 4096) = 4096
+pread64(11, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0@\0\0\0\0\0@\0@\0\0\0\0\0"..., 56, 4194368) = 56
+pread64(11, "\3\0\0\0\4\0\0\0\0\20\0\0\0\0\0\0\0\20@\0\0\0\0\0\0\20@\0\0\0\0\0"..., 56, 4194424) = 56
+pread64(11, "\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0"..., 56, 4194480) = 56
+pread64(11, "\1\0\0\0\4\0\0\0\0\20\0\0\0\0\0\0\0\20@\0\0\0\0\0\0\20@\0\0\0\0\0"..., 56, 4194536) = 56
+pread64(11, "\1\0\0\0\6\0\0\0\370\35\0\0\0\0\0\0\370-@\0\0\0\0\0\370-@\0\0\0\0\0"..., 56, 4194592) = 56
+pread64(11, "\2\0\0\0\6\0\0\0\10\36\0\0\0\0\0\0\10.@\0\0\0\0\0\10.@\0\0\0\0\0"..., 56, 4194648) = 56
+pread64(11, "\1\0\0\0\0\0\0\0 \0\0\0\0\0\0\0\f\0\0\0\0\0\0\0<\3@\0\0\0\0\0"..., 464, 4206088) = 464
+lseek(14, 11784, SEEK_SET)              = 11784
+pread64(11, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0@\0\0\0\0\0@\0@\0\0\0\0\0"..., 56, 4194368) = 56
+pread64(11, "\3\0\0\0\4\0\0\0\0\20\0\0\0\0\0\0\0\20@\0\0\0\0\0\0\20@\0\0\0\0\0"..., 56, 4194424) = 56
+pread64(11, "\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0"..., 56, 4194480) = 56
+pread64(11, "\1\0\0\0\4\0\0\0\0\20\0\0\0\0\0\0\0\20@\0\0\0\0\0\0\20@\0\0\0\0\0"..., 56, 4194536) = 56
+pread64(11, "\1\0\0\0\6\0\0\0\370\35\0\0\0\0\0\0\370-@\0\0\0\0\0\370-@\0\0\0\0\0"..., 56, 4194592) = 56
+pread64(11, "\2\0\0\0\6\0\0\0\10\36\0\0\0\0\0\0\10.@\0\0\0\0\0\10.@\0\0\0\0\0"..., 56, 4194648) = 56
+pread64(11, "\1\0\0\0\0\0\0\0 \0\0\0\0\0\0\0\f\0\0\0\0\0\0\0<\3@\0\0\0\0\0"..., 464, 4206088) = 464
+lseek(14, 11784, SEEK_SET)              = 11784
+pread64(11, "X\33\3531=\177\0\0", 8, 4206288) = 8
+brk(0x55ca9aff0000)                     = 0x55ca9aff0000
+brk(0x55ca9b011000)                     = 0x55ca9b011000
+openat(AT_FDCWD, "/lib64/ld-linux-x86-64.so.2", O_RDONLY) = 15
+fcntl(15, F_GETFD)                      = 0
+fcntl(15, F_SETFD, FD_CLOEXEC)          = 0
+fstat(15, {st_mode=S_IFREG|0755, st_size=983840, ...}) = 0
+lseek(15, 757760, SEEK_SET)             = 757760
+read(15, "/x86/nptl/bits\0../sysdeps/nptl/b"..., 559) = 559
+read(15, "\336\0\0\0\5\0\10\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\6\0\22\0\0\0\0\0"..., 4096) = 4096
+mmap(NULL, 172032, PROT_READ, MAP_PRIVATE, 15, 0xb9000) = 0x7fa874839000
+madvise(0x7fa874839000, 172032, MADV_WILLNEED) = 0
+brk(0x55ca9b032000)                     = 0x55ca9b032000
+brk(0x55ca9b053000)                     = 0x55ca9b053000
+brk(0x55ca9b074000)                     = 0x55ca9b074000
+brk(0x55ca9b095000)                     = 0x55ca9b095000
+brk(0x55ca9b0b6000)                     = 0x55ca9b0b6000
+brk(0x55ca9b0d7000)                     = 0x55ca9b0d7000
+lseek(14, 11784, SEEK_SET)              = 11784
+pread64(11, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0@\0\0\0\0\0@\0@\0\0\0\0\0"..., 56, 4194368) = 56
+pread64(11, "\3\0\0\0\4\0\0\0\0\20\0\0\0\0\0\0\0\20@\0\0\0\0\0\0\20@\0\0\0\0\0"..., 56, 4194424) = 56
+pread64(11, "\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0"..., 56, 4194480) = 56
+pread64(11, "\1\0\0\0\4\0\0\0\0\20\0\0\0\0\0\0\0\20@\0\0\0\0\0\0\20@\0\0\0\0\0"..., 56, 4194536) = 56
+pread64(11, "\1\0\0\0\6\0\0\0\370\35\0\0\0\0\0\0\370-@\0\0\0\0\0\370-@\0\0\0\0\0"..., 56, 4194592) = 56
+pread64(11, "\2\0\0\0\6\0\0\0\10\36\0\0\0\0\0\0\10.@\0\0\0\0\0\10.@\0\0\0\0\0"..., 56, 4194648) = 56
+pread64(11, "\1\0\0\0\0\0\0\0 \0\0\0\0\0\0\0\f\0\0\0\0\0\0\0<\3@\0\0\0\0\0"..., 464, 4206088) = 464
+lseek(14, 11784, SEEK_SET)              = 11784
+pread64(11, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0@\0\0\0\0\0@\0@\0\0\0\0\0"..., 56, 4194368) = 56
+pread64(11, "\3\0\0\0\4\0\0\0\0\20\0\0\0\0\0\0\0\20@\0\0\0\0\0\0\20@\0\0\0\0\0"..., 56, 4194424) = 56
+pread64(11, "\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0"..., 56, 4194480) = 56
+pread64(11, "\1\0\0\0\4\0\0\0\0\20\0\0\0\0\0\0\0\20@\0\0\0\0\0\0\20@\0\0\0\0\0"..., 56, 4194536) = 56
+pread64(11, "\1\0\0\0\6\0\0\0\370\35\0\0\0\0\0\0\370-@\0\0\0\0\0\370-@\0\0\0\0\0"..., 56, 4194592) = 56
+pread64(11, "\2\0\0\0\6\0\0\0\10\36\0\0\0\0\0\0\10.@\0\0\0\0\0\10.@\0\0\0\0\0"..., 56, 4194648) = 56
+pread64(11, "\1\0\0\0\0\0\0\0 \0\0\0\0\0\0\0\f\0\0\0\0\0\0\0<\3@\0\0\0\0\0"..., 464, 4206088) = 464
+lseek(14, 11784, SEEK_SET)              = 11784
+pread64(11, "X\33\3531=\177\0\0", 8, 4206288) = 8
+openat(AT_FDCWD, "/home/ingenium/.cache/debuginfod_client/0fb10d238b6a3a7c5a84719b02390800f6254c3e/debuginfo", O_RDONLY) = 16
+fcntl(16, F_GETFD)                      = 0
+fcntl(16, F_SETFD, FD_CLOEXEC)          = 0
+fstat(16, {st_mode=S_IFREG|0400, st_size=58544, ...}) = 0
+lseek(16, 0, SEEK_SET)                  = 0
+read(16, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 416) = 416
+read(16, "\356+\0\0\5\0\1\10\0\0\0\0=\221\20\0\0\35U\0\0\0\0\0\0\0\340\7\0\0\0\0"..., 4096) = 4096
+lseek(16, 4512, SEEK_SET)               = 4512
+read(16, "vc\0\6\177\33\36\f\0\0\nseq\0\6\200\6\330\0\0\0\nsec\0\6\201\6\347\0"..., 8192) = 8192
+read(16, "\n\0\0\17\27\2<\1\0\0\0\1T\r\0\0\17\33\2<\1\0\0\1\1\336\7\0\0\17\35\2"..., 4096) = 4096
+lseek(16, 16800, SEEK_SET)              = 16800
+read(16, "\1\1I\23\1\23\0\0$!\0I\23/\v\0\0%\r\0\3\16:!\30;\v9\vI\238"..., 4096) = 4096
+lseek(16, 32768, SEEK_SET)              = 32768
+read(16, "\4\6\5\2\6\3\364~\1\25\5(\6\1\4\1\5\34\6\3\306\1J\5\2\24\5\25\6\3\23\1"..., 4096) = 4096
+lseek(16, 36864, SEEK_SET)              = 36864
+read(16, "7\0__int128\0__compiletime_assert_"..., 4096) = 4096
+read(16, " -g -g -O2 -O2 -std=gnu11 -fshor"..., 4096) = 4096
+lseek(16, 45056, SEEK_SET)              = 45056
+lseek(16, 28672, SEEK_SET)              = 28672
+read(16, "\2\316\2\4\360\4\250\5\0\4\202\5\206\5\4\213\5\243\5\0\4\332\2\364\2\4\367\2\367\2\0\4"..., 4096) = 4096
+lseek(16, 32768, SEEK_SET)              = 32768
+read(16, "\4\6\5\2\6\3\364~\1\25\5(\6\1\4\1\5\34\6\3\306\1J\5\2\24\5\25\6\3\23\1"..., 4096) = 4096
+brk(0x55ca9b0f8000)                     = 0x55ca9b0f8000
+brk(0x55ca9b119000)                     = 0x55ca9b119000
+brk(0x55ca9b147000)                     = 0x55ca9b147000
+brk(0x55ca9b169000)                     = 0x55ca9b169000
+brk(0x55ca9b18a000)                     = 0x55ca9b18a000
+brk(0x55ca9b1ab000)                     = 0x55ca9b1ab000
+brk(0x55ca9b1cc000)                     = 0x55ca9b1cc000
+brk(0x55ca9b1ed000)                     = 0x55ca9b1ed000
+brk(0x55ca9b20e000)                     = 0x55ca9b20e000
+brk(0x55ca9b236000)                     = 0x55ca9b236000
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETSIGINFO, 91031, NULL, {si_signo=SIGSTOP, si_code=SI_KERNEL}) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+pwrite64(11, "\314", 1, 140725190478991) = 1
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+pwrite64(11, "\217L\375\"\375\177\0\0", 8, 140725190478968) = 8
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4c78, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4c78, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4c78, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+pread64(11, "\314", 1, 140725190478991) = 1
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4c78, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31ce5160, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4c78, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xe6, rip=0x7f3d31ce5160, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4c78, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1337, orig_rax=0xffffffffffffffff, rip=0x7f3d31ce5160, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4c78, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+newfstatat(AT_FDCWD, "/proc/91031/fd/0", {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x3), ...}, 0) = 0
+fstat(0, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+pread64(11, "\220", 1, 139900804907027) = 1
+pwrite64(11, "\314", 1, 139900804907027) = 1
+pread64(11, "\220", 1, 139900804907159) = 1
+pwrite64(11, "\314", 1, 139900804907159) = 1
+pread64(11, "\220", 1, 139900805848809) = 1
+pwrite64(11, "\314", 1, 139900805848809) = 1
+pread64(11, "\220", 1, 139900807005035) = 1
+pwrite64(11, "\314", 1, 139900807005035) = 1
+pread64(11, "\220", 1, 139900807050000) = 1
+pwrite64(11, "\314", 1, 139900807050000) = 1
+pread64(11, "\220", 1, 139900807131498) = 1
+pwrite64(11, "\314", 1, 139900807131498) = 1
+pread64(11, "\314", 1, 140725190478991) = 1
+pwrite64(11, "\314", 1, 140725190478991) = 1
+ptrace(PTRACE_CONT, 91031, 0x1, 0)      = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_TRAPPED, si_pid=91031, si_uid=1000, si_status=SIGSEGV, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 94328670175120
+rt_sigprocmask(SIG_BLOCK, [INT ALRM TERM CHLD WINCH], [], 8) = 0
+pipe2([17, 18], O_CLOEXEC)              = 0
+fcntl(17, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+fcntl(18, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+poll([{fd=17, events=POLLIN}], 1, 0)    = 0 (Timeout)
+read(17, 0x7ffcd6717fb7, 1)             = -1 EAGAIN (Resource temporarily unavailable)
+write(18, "+", 1)                       = 1
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+read(5, 0x7ffcd67186d7, 1)              = -1 EAGAIN (Resource temporarily unavailable)
+read(17, "+", 1)                        = 1
+read(17, 0x7ffcd6717d57, 1)             = -1 EAGAIN (Resource temporarily unavailable)
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+wait4(-1, [{WIFSTOPPED(s) && WSTOPSIG(s) == SIGSEGV}], WNOHANG|__WALL, NULL) = 91031
+wait4(-1, 0x7ffcd6717dfc, WNOHANG|__WALL, NULL) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+openat(AT_FDCWD, "/proc/91031/task/91031/stat", O_RDONLY|O_CLOEXEC) = 19
+fstat(19, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(19, "91031 (target) t 63681 91031 636"..., 1024) = 278
+read(19, "", 1024)                      = 0
+close(19)                               = 0
+read(17, 0x7ffcd6717d37, 1)             = -1 EAGAIN (Resource temporarily unavailable)
+write(18, "+", 1)                       = 1
+pread64(11, "\0\372\3051=\177\0\0", 8, 139900807223312) = 8
+ptrace(PTRACE_PEEKUSER, 91031, 8*SS+8, [0x7f3d31c5f740]) = 0
+pread64(11, "@\367\3051=\177\0\0\340\0\3061=\177\0\0@\367\3051=\177\0\0\0\0\0\0\0\0\0\0"..., 2368, 139900804790080) = 2368
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0x1f44ba60, rcx=0x1341, rdx=0, rsi=0, rdi=0x1f44ba60, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+newfstatat(AT_FDCWD, "/proc/91031/fd/0", {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x3), ...}, 0) = 0
+fstat(0, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+poll([{fd=0, events=POLLIN}], 1, 0)     = 0 (Timeout)
+rt_sigprocmask(SIG_BLOCK, [INT ALRM TERM CHLD WINCH], [], 8) = 0
+close(17)                               = 0
+close(18)                               = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+ptrace(PTRACE_GETSIGINFO, 91031, NULL, {si_signo=SIGSEGV, si_code=SEGV_ACCERR, si_addr=0x7ffd22fd4c8f}) = 0
+ptrace(PTRACE_SETSIGINFO, 91031, NULL, {si_signo=SIGSTOP, si_code=SI_KERNEL}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0x1f44ba60, rcx=0x1341, rdx=0, rsi=0, rdi=0x1f44ba60, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x1341, rdx=0, rsi=0, rdi=0x1f44ba60, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x1341, rdx=0, rsi=0, rdi=0x1f44ba60, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0, rsi=0, rdi=0x1f44ba60, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0, rsi=0, rdi=0x1f44ba60, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1f44ba60, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0x1f44ba60, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4c78, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4c80, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0x7f3d31e4cac0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0x1337, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x4, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0xffffffffffffffc0, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7ffd22fd4c8f, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x10206, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_SETREGSET, 91031, NT_X86_XSTATE, {iov_base=0x7fa86c028b40, iov_len=832}) = 0
+ptrace(PTRACE_GETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xffffffffffffffff, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+ptrace(PTRACE_SETREGS, 91031, {r15=0x402e00, r14=0x7f3d31eb1000, r13=0x1, r12=0x7ffd22fd4ed8, rbp=0x7ffd22fd4d20, rbx=0, r11=0x202, r10=0x7ffd22fd4d60, r9=0, r8=0, rax=0xfffffffffffffdfc, rcx=0x7f3d31cd0c5e, rdx=0x7ffd22fd4d60, rsi=0, rdi=0, orig_rax=0xe6, rip=0x7f3d31cd0c5e, cs=0x33, eflags=0x202, rsp=0x7ffd22fd4d10, ss=0x2b, fs_base=0x7f3d31c5f740, gs_base=0, ds=0, es=0, fs=0, gs=0}) = 0
+pwrite64(11, "\220", 1, 139900804907159) = 1
+pwrite64(11, "\220", 1, 139900804907027) = 1
+pwrite64(11, "\220", 1, 139900805848809) = 1
+pwrite64(11, "\314", 1, 140725190478991) = 1
+pwrite64(11, "\220", 1, 139900807005035) = 1
+pwrite64(11, "\220", 1, 139900807050000) = 1
+pwrite64(11, "\220", 1, 139900807131498) = 1
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+write(1, "\33[36m$1\33[m = (void *\33[36m\33[m) \33["..., 49) = 49
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, {sa_handler=0x55ca634ee220, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa88e8262c0}, 8) = 0
+lseek(16, 36279, SEEK_SET)              = 36279
+close(16)                               = 0
+lseek(14, 8152, SEEK_SET)               = 8152
+close(14)                               = 0
+lseek(15, 758331, SEEK_SET)             = 758331
+close(15)                               = 0
+lseek(12, 2001760, SEEK_SET)            = 2001760
+close(12)                               = 0
+ioctl(0, TIOCGWINSZ, {ws_row=55, ws_col=236, ws_xpixel=1891, ws_ypixel=1000}) = 0
+ioctl(0, TIOCSWINSZ, {ws_row=55, ws_col=236, ws_xpixel=1891, ws_ypixel=1000}) = 0
+ioctl(0, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETSW2, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+write(1, "\33[?2004h", 8)               = 8
+write(1, "(gdb) ", 6)                   = 6
+read(5, 0x7ffcd6719257, 1)              = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1 <detached ...>
